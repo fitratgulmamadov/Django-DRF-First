@@ -5,7 +5,7 @@ We need python3 with installed django>=4, pillow
 
 ## Install dependencies:
 ```sh
-python -m venv venv
+python3 -m venv venv
 source venv/bin/activate
 
 pip install -r req.txt
