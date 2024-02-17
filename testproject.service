@@ -1,0 +1,10 @@
+After = network.target
+
+[Service]
+User=root
+Group=root
+WorkingDirectory=/home/fitrat/Test/TestProject
+ExecStart=/home/fitrat/Test/venv/bin/gunicorn --workers 4 --bind 127.0.0.1:8001 TestProject.wsgi:application
+
+[Install]
+WantedBy=multi-user.target

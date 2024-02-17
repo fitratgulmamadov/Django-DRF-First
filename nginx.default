@@ -1,0 +1,21 @@
+server{
+        listen 80;
+        server_name Test;
+
+        location / {
+                proxy_set_header Host $host:80;
+                proxy_pass http://127.0.0.1:8001;
+        }
+
+        location /dj_static/ {
+                autoindex off;
+                alias /home/fitrat/Test/TestProject/dj_static/;
+
+        }
+
+        location /uploads/ {
+                autoindex off;
+                alias /home/fitrat/Test/TestProject/uploads/uploads/;
+        }
+
+}
