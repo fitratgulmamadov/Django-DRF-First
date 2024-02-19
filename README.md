@@ -34,6 +34,24 @@ python manage.py runserver
 
 
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/965FtV9Au5o/0.jpg)](https://www.youtube.com/watch?v=965FtV9Au5o)
+
+
+## Deploy on docker 
+
+```sh
+git clone https://github.com/fitratgulmamadov/Django-DRF-First.git
+cd Django-DRF-First
+
+sudo apt install docker docker-compose
+
+sudo docker-compose up
+```
+
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/5OLVGVhgoFs/0.jpg)](https://www.youtube.com/watch?v=5OLVGVhgoFs)
+
+
+
+
 ## Authors
 
 - [@fitratgulmamadov](https://www.github.com/fitratgulmamadov)
