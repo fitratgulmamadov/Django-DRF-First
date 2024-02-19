@@ -1,0 +1,23 @@
+version: '3.9'
+
+services:
+  django:
+    image: test-django-project:0.0.1
+    build: .
+    command: sh -c "gunicorn --workers 4 --bind 0.0.0.0:8000 TestProject.wsgi:application"
+
+    volumes:
+      - static_data:/Test/TestProject/dj_static
+
+  nginx:
+    image: nginx:1.19.8-alpine
+    depends_on:
+      - django
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx-conf.d:/etc/nginx/conf.d
+      - static_data:/var/www/html/dj_static
+
+volumes:
+  static_data:
